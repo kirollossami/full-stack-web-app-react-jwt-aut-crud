@@ -1,0 +1,181 @@
+.about-page {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background: #101d2b;
+  overflow-x: hidden; /* تم إلغاء overflow-x */
+}
+
+.about-hero {
+  position: relative;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* overflow: hidden; تم إزالته إذا كان يسبب مشاكل */
+}
+
+.about-hero .hero-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: brightness(0.5);
+}
+
+.about-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(16,29,43,0.4);
+  z-index: 1;
+}
+
+.hero-text {
+  position: relative;
+  color: #fff;
+  z-index: 2;
+  text-align: center;
+  max-width: 700px;
+  padding: 0 20px;
+}
+
+.hero-text h1 {
+  margin-top: 205px;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.hero-text p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+}
+
+/* About Section */
+.about-section {
+  padding: 60px 20px;
+  text-align: center;
+  /* overflow-x: hidden; إذا كان موجوداً تم إزالته */
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  line-height: 1.6;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  /* overflow-x: hidden; إذا كان موجوداً تم إزالته */
+}
+
+.feature-card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(14px);
+  padding: 20px;
+  border-radius: 20px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  /* overflow: hidden; إذا كان موجوداً تم إزالته */
+}
+
+.feature-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.feature-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+/* CTA Section */
+.about-cta {
+  text-align: center;
+  padding: 50px 20px;
+  background: rgba(255,126,95,0.1);
+  /* overflow-x: hidden; إذا كان موجوداً تم إزالته */
+}
+
+.about-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.about-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.btn-booking {
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  background-color: #101d2b;
+  border: none;
+  border-radius: 15px;
+  padding: 12px 25px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  /* overflow: hidden; إذا كان يسبب مشاكل يمكن إزالته */
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* إزالة التكرار في keyframes */
+@keyframes rotateGlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media screen and (max-width: 992px) {
+  .features { 
+    flex-direction: column; 
+    align-items: center; 
+    /* overflow-x: hidden; تم إزالته */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-text h1 { 
+    font-size: 2rem; 
+    margin-top: 150px; /* تعديل الـ margin ليكون مناسباً للشاشات الصغيرة */
+  }
+  .hero-text p { font-size: 1rem; }
+  .about-section h2 { font-size: 2rem; }
+  
+  /* إضافة تحسينات إضافية للشاشات الصغيرة */
+  .about-hero {
+    height: 60vh;
+  }
+  
+  .feature-card {
+    width: 100%;
+    max-width: 300px;
+  }
+}

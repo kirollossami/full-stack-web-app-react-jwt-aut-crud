@@ -1,0 +1,147 @@
+.contact-page {
+  padding: 60px 20px;
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+  position: relative;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.contact-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(16,29,43,0.7);
+  z-index: 0;
+}
+
+.contact-header {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 50px;
+}
+
+.contact-header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.contact-header h1 span {
+  color: #f4b400;
+}
+
+.contact-header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+.contact-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 40px;
+  max-width: 1000px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+/* Contact Info */
+.contact-info {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.info-box {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(14px);
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.info-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+.info-box .icon {
+  font-size: 28px;
+  color: #f4b400;
+  margin-bottom: 10px;
+}
+
+.info-box h3 {
+  margin-bottom: 5px;
+}
+
+.info-box p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* Contact Form */
+.contact-form {
+  flex: 1 1 500px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(14px);
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.contact-form .form-group input::placeholder,
+.contact-form .form-group textarea::placeholder {
+  color: rgba(255,255,255,0.7);
+  font-style: italic;
+}
+
+.contact-form .form-group input:hover,
+.contact-form .form-group textarea:hover {
+  background: rgba(255,255,255,0.3);
+  transform: translateY(-2px);
+}
+
+.btn-contact {
+  padding: 14px 25px;
+  border-radius: 20px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: black;
+  color: #fff;
+  transition: all 0.3s;
+  box-shadow: 0 6px 25px rgba(255,126,95,0.5);
+}
+
+.btn-contact:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 30px rgba(255,126,95,0.6);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .contact-container {
+    flex-direction: column;
+  }
+}
