@@ -58,7 +58,8 @@
   border-radius: 8px;
   font-size: 1rem;
   transition: all 0.3s ease;
-  background: white;
+  background: #f8f9fa;
+  color: black;
   box-sizing: border-box;
 }
 
@@ -67,6 +68,7 @@
   outline: none;
   border-color: #667eea;
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  color: white;
 }
 
 .form-actions {
