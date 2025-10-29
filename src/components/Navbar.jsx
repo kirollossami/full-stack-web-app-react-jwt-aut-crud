@@ -62,7 +62,7 @@ const Navbar = () => {
         <div className="contact-item">
           <FaPhoneAlt className="icon" />
           <a
-            href="https://wa.me/201026495325"
+            href="https://wa.me/201034037540"
             target="_blank"
             rel="noopener noreferrer"
             className="whatsapp-link"
