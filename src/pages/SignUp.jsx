@@ -14,7 +14,6 @@ const SignUp = () => {
     e.preventDefault();
     setLoading(true);
 
-    // استخدام URL مباشر
     const API_URL = "http://localhost:5000";
     const apiUrl = `${API_URL}/api/auth/signup`;
     

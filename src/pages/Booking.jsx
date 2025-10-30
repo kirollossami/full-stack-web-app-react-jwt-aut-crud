@@ -20,27 +20,26 @@ const Booking = () => {
   const [bookingLoading, setBookingLoading] = useState(false);
   const navigate = useNavigate();
 
-  // الحصول على تاريخ اليوم بصيغة YYYY-MM-DD
+  // Date 
   const getTodayDate = () => {
     const today = new Date();
     return today.toISOString().split('T')[0];
   };
 
-  // الحصول على تاريخ الغد بصيغة YYYY-MM-DD
+  // Booking start from the next day 
   const getTomorrowDate = () => {
     const tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);
     return tomorrow.toISOString().split('T')[0];
   };
 
-  // دالة مساعدة للحصول على تاريخ الغد من تاريخ محدد
   const getTomorrowDateFromDate = (dateString) => {
     const date = new Date(dateString);
     date.setDate(date.getDate() + 1);
     return date.toISOString().split('T')[0];
   };
 
-  // التحقق من صحة التوكن وجلب بيانات المستخدم
+  // Check token validation
   useEffect(() => {
     const token = localStorage.getItem("token");
     const userData = localStorage.getItem("user");
@@ -54,7 +53,7 @@ const Booking = () => {
       try {
         const parsedUser = JSON.parse(userData);
         setUser(parsedUser);
-        // تعبئة بيانات المستخدم تلقائياً
+        // Fetching data auto
         setName(parsedUser.name || "");
         setEmail(parsedUser.email || "");
       } catch (error) {
@@ -68,7 +67,7 @@ const Booking = () => {
     setLoading(false);
   }, [navigate]);
 
-  // جلب الغرف المتاحة مع التوكن
+  // fetching available rooms with token
   const fetchAvailableRooms = () => {
     const token = localStorage.getItem("token");
     
@@ -101,7 +100,7 @@ const Booking = () => {
       });
   };
 
-  // استدعاء الدوال عند تحميل المكون
+  // call function when loading 
   useEffect(() => {
     if (user) {
       fetchAvailableRooms();

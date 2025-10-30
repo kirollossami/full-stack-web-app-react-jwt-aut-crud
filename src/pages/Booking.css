@@ -360,7 +360,6 @@
   transform: none;
 }
 
-/* عناصر التحميل والرسائل */
 .loading-container,
 .error-container,
 .rooms-loading,
@@ -458,7 +457,7 @@
   margin: 5px 0;
 }
 
-/* Responsive لجميع المقاسات */
+/* Fully Responsive */
 @media screen and (max-width: 1100px) {
   .booking-container {
     gap: 30px;

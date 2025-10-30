@@ -588,7 +588,6 @@
   }
 }
 
-/* تحسينات إضافية للشاشات الكبيرة جداً */
 @media screen and (min-width: 1600px) {
   .accommodation-section {
     padding: 80px 40px;
@@ -617,7 +616,6 @@
   }
 }
 
-/* تحسينات للوضع الأفقي على الأجهزة المحمولة */
 @media screen and (max-height: 500px) and (orientation: landscape) {
   .accommodation-section {
     padding: 30px 15px;

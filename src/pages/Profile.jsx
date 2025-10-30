@@ -15,7 +15,6 @@ const Profile = () => {
 
   const token = localStorage.getItem("token");
 
-  // ✅ تحميل بيانات المستخدم
   useEffect(() => {
     if (!token) return;
 
@@ -41,7 +40,6 @@ const Profile = () => {
     fetchUser();
   }, [token]);
 
-  // ✅ جلب حجوزات المستخدم
   const fetchUserBookings = async () => {
     if (!token) return;
 
@@ -65,7 +63,6 @@ const Profile = () => {
     }
   };
 
-  // ✅ استدعاء جلب الحجوزات عند تحميل المكون
   useEffect(() => {
     if (user) {
       fetchUserBookings();
@@ -128,7 +125,7 @@ const Profile = () => {
     }
   };
 
-  // ✅ دالة إلغاء الحجز
+  // Cancell Booking
   const handleCancelBooking = async (bookingId) => {
     if (!window.confirm("Are you sure you want to cancel this booking?")) {
       return;
@@ -193,8 +190,6 @@ const Profile = () => {
   return (
     <div className="profile-container">
       <h1 className="profile-title">My Profile</h1>
-
-      {/* Avatar */}
       <div className="profile-section">
         <div className="avatar-section">
           <div className="avatar-container">
@@ -221,8 +216,6 @@ const Profile = () => {
           </div>
         </div>
       </div>
-
-      {/* Info Section */}
       <div className="profile-section">
         <h2 className="section-title">Personal Information</h2>
 
@@ -260,8 +253,6 @@ const Profile = () => {
           {saving ? "Saving..." : "Save Changes"}
         </button>
       </div>
-
-      {/* System Info */}
       <div className="profile-section">
         <h2 className="section-title">System Information</h2>
         <div className="field-group">
@@ -281,8 +272,6 @@ const Profile = () => {
           <span className="field-value">{formatDate(user.updated_at)}</span>
         </div>
       </div>
-
-      {/* ✅ قسم حجوزات المستخدم */}
       <div className="profile-section">
         <h2 className="section-title">My Bookings</h2>
         {bookingsLoading ? (

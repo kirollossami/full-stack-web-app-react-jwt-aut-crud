@@ -1,4 +1,4 @@
-/* ===== GLOBAL ANIMATIONS ===== */
+/* --- Global animation ---*/
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -131,7 +131,7 @@
   }
 }
 
-/* ===== HEADER ANIMATIONS ===== */
+/* --- Header animation --- */
 .home-header {
   position: relative;
   height: 80vh;
@@ -220,7 +220,7 @@
   animation: fadeInUp 1s ease-out 1.5s both;
 }
 
-/* ===== GLOW BUTTON ANIMATIONS ===== */
+/* --- Glow Button animation ---*/
 .btn-glow {
   position: relative;
   overflow: hidden;
@@ -288,7 +288,7 @@
   }
 }
 
-/* ===== QUICK BOOKING FORM ANIMATIONS ===== */
+/* --- Quick booking form animation*/
 .quick-booking-section {
   padding: 60px 20px;
   display: flex;
@@ -418,7 +418,7 @@
   animation: glow 1s ease-in-out;
 }
 
-/* ===== SPECIAL OFFERS ANIMATIONS ===== */
+/* special offer animation */
 .special-offers-section {
   padding: clamp(40px, 8vw, 80px) clamp(15px, 4vw, 20px);
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
@@ -564,7 +564,7 @@ a {
   box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
 }
 
-/* ===== CATEGORIES ANIMATIONS ===== */
+/* --- categories animation ---*/
 .categories-section {
   padding: clamp(40px, 8vw, 80px) clamp(15px, 4vw, 20px);
   background: white;
@@ -647,7 +647,7 @@ a {
   opacity: 1;
 }
 
-/* ===== TESTIMONIALS ANIMATIONS ===== */
+/* --- Testimonials animation --- */
 .testimonials-section {
   padding: clamp(40px, 8vw, 80px) clamp(15px, 4vw, 20px);
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -742,7 +742,7 @@ a {
   right: -10px;
 }
 
-/* ===== FAQ ANIMATIONS ===== */
+/* --- FAQ animation */
 .faq-section {
   padding: clamp(40px, 8vw, 80px) clamp(15px, 4vw, 20px);
   background: #f7fafc;
@@ -800,7 +800,7 @@ a {
   transform: rotate(90deg);
 }
 
-/* ===== FOOTER ANIMATIONS ===== */
+/* -- footer animation --- */
 .home-footer {
   background: #2d3748;
   color: white;
@@ -865,7 +865,7 @@ a {
   left: 0;
 }
 
-/* ===== SCROLL ANIMATIONS ===== */
+/* Scroll animation */
 .offer-card,
 .category-card,
 .testimonial-card,
@@ -883,14 +883,13 @@ a {
   transform: translateY(0);
 }
 
-/* ===== LOADING ANIMATIONS ===== */
+/* --- loading animation ---*/
 .loading-shimmer {
   background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
   background-size: 1000px 100%;
   animation: shimmer 2s infinite linear;
 }
 
-/* ===== REDUCED MOTION SUPPORT ===== */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -901,7 +900,6 @@ a {
   }
 }
 
-/* ===== RESPONSIVE ANIMATION TIMINGS ===== */
 @media screen and (max-width: 768px) {
   .header-content h1 {
     animation: fadeInUp 1s ease-out 0.5s both;

@@ -22,7 +22,6 @@ const Contact = () => {
       </div>
 
       <div className="contact-container">
-        {/* Contact Info */}
         <div className="contact-info">
           <div className="info-box">
             <FaMapMarkerAlt className="icon"/>
@@ -41,7 +40,6 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Contact Form */}
         <form className="contact-form" onSubmit={handleSubmit}>
           <div className="form-group">
             <input 

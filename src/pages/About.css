@@ -2,7 +2,7 @@
   font-family: Arial, sans-serif;
   color: #fff;
   background: #101d2b;
-  overflow-x: hidden; /* تم إلغاء overflow-x */
+  overflow-x: hidden;
 }
 
 .about-hero {
@@ -11,7 +11,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* overflow: hidden; تم إزالته إذا كان يسبب مشاكل */
 }
 
 .about-hero .hero-img {
@@ -55,7 +54,7 @@
 .about-section {
   padding: 60px 20px;
   text-align: center;
-  /* overflow-x: hidden; إذا كان موجوداً تم إزالته */
+
 }
 
 .about-section h2 {
@@ -75,7 +74,6 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  /* overflow-x: hidden; إذا كان موجوداً تم إزالته */
 }
 
 .feature-card {
@@ -86,7 +84,6 @@
   width: 250px;
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
-  /* overflow: hidden; إذا كان موجوداً تم إزالته */
 }
 
 .feature-card img {
@@ -117,7 +114,6 @@
   text-align: center;
   padding: 50px 20px;
   background: rgba(255,126,95,0.1);
-  /* overflow-x: hidden; إذا كان موجوداً تم إزالته */
 }
 
 .about-cta h2 {
@@ -141,13 +137,11 @@
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;
-  /* overflow: hidden; إذا كان يسبب مشاكل يمكن إزالته */
   transition: all 0.3s ease;
   letter-spacing: 1px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-/* إزالة التكرار في keyframes */
 @keyframes rotateGlow {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -157,19 +151,17 @@
   .features { 
     flex-direction: column; 
     align-items: center; 
-    /* overflow-x: hidden; تم إزالته */
   }
 }
 
 @media screen and (max-width: 480px) {
   .hero-text h1 { 
     font-size: 2rem; 
-    margin-top: 150px; /* تعديل الـ margin ليكون مناسباً للشاشات الصغيرة */
+    margin-top: 150px;
   }
   .hero-text p { font-size: 1rem; }
   .about-section h2 { font-size: 2rem; }
   
-  /* إضافة تحسينات إضافية للشاشات الصغيرة */
   .about-hero {
     height: 60vh;
   }

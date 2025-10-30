@@ -14,12 +14,9 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const HOST = "localhost";
 
-
-
-// ✅ إعدادات CORS
 app.use(cors({
   origin: [
-    "http://localhost:5173", // Vite dev server
+    "http://localhost:5173",
     "http://127.0.0.1:5173",
     "http://localhost:3000",
     "http://127.0.0.1:3000"
@@ -43,19 +40,16 @@ app.use(session({
   }
 }));
 
-// ✅ تفعيل Passport
 app.use(passport.initialize());
 app.use(passport.session());
 
 console.log("✅ Using in-memory database for testing");
 
-// ✅ تسجيل الراوتات
-app.use("/api/rooms", roomsRoutes); // 🔥 راوت الغرف
-app.use("/api/auth", authRoutes);   // راوت التسجيل والدخول
+app.use("/api/rooms", roomsRoutes); 
+app.use("/api/auth", authRoutes);   
 app.use("/api", booking);
 app.use("/api", dashboardRoutes);
 
-// ✅ الراوت الأساسي
 app.get("/", (req, res) => {
   res.json({
     success: true,
@@ -65,7 +59,7 @@ app.get("/", (req, res) => {
   });
 });
 
-// ✅ فحص صحة السيرفر
+
 app.get("/api/health", (req, res) => {
   res.json({
     success: true,
@@ -75,7 +69,6 @@ app.get("/api/health", (req, res) => {
   });
 });
 
-// ✅ راوت اختبار فقط (اختياري)
 app.post("/api/test-signup", (req, res) => {
   console.log("📨 Test signup request:", req.body);
 
@@ -93,7 +86,6 @@ app.post("/api/test-signup", (req, res) => {
   });
 });
 
-// ✅ معالجة 404 (Route not found)
 app.use((req, res) => {
   res.status(404).json({
     success: false,
@@ -109,7 +101,6 @@ app.use((req, res) => {
   });
 });
 
-// ✅ معالجة أخطاء السيرفر
 app.use((err, req, res, next) => {
   console.error("Server error:", err);
   res.status(500).json({
@@ -119,7 +110,6 @@ app.use((err, req, res, next) => {
   });
 });
 
-// ✅ تشغيل السيرفر
 app.listen(PORT, HOST, () => {
   console.log(`🚀 Server is running on http://${HOST}:${PORT}`);
   console.log(`🌍 Environment: ${process.env.NODE_ENV || "development"}`);

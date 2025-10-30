@@ -19,7 +19,7 @@ const Login = () => {
     setError("");
 
     if (!email || !password) {
-      setError("⚠️ Please fill in all fields");
+      setError("Please fill in all fields");
       setLoading(false);
       return;
     }
@@ -47,25 +47,21 @@ const Login = () => {
       console.log("📨 Response data:", data);
 
       if (response.ok) {
-        // ✅ محاولة الحصول على التوكن من عدة احتمالات
-       // ✅ استخراج البيانات من داخل "data.data"
         const token = data?.data?.token;
         const user = data?.data?.user;
 
         if (!token || !user) {
-          console.warn("⚠️ Token or user missing in response!");
-          console.log("📦 Full backend response:", data);
-          setError("⚠️ Invalid response format from server. Check backend structure.");
+          console.warn("Token or user missing in response!");
+          console.log("Full backend response:", data);
+          setError("Invalid response format from server. Check backend structure.");
           setLoading(false);
           return;
         }
-
-        // ✅ حفظ البيانات في LocalStorage
         localStorage.setItem("token", token);
         localStorage.setItem("user", JSON.stringify(user));
 
-        console.log("✅ Saved token:", token);
-        console.log("✅ Saved user:", user);
+        console.log("Saved token:", token);
+        console.log("Saved user:", user);
         alert("🎉 Login successful!");
         navigate(from, { replace: true });
 
@@ -74,7 +70,7 @@ const Login = () => {
         alert("🎉 Login successful!");
         navigate(from, { replace: true });
       } else {
-        // ❌ Login failed
+        // Login failed
         let errorMessage = "Login failed";
         if (response.status === 401) {
           errorMessage = "❌ Invalid email or password";

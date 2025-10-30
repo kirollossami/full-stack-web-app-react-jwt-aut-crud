@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./RestaurantsAndBarsPage.css";
 
-// البيانات الكاملة مع التفاصيل والصور
 const items = [
   { 
     id: 1, 

@@ -28,7 +28,6 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        {/* Public Routes */}
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
@@ -37,8 +36,7 @@ function App() {
         <Route path="/accommodation" element={<Accommodation />} />
         <Route path="/restaurantsandbars" element={<RestaurantsAndBarsPage />} />
         <Route path="/dashboard-login" element={<DashboardLogin />} />
-        
-        {/* Dashboard Routes - Nested Routes */}
+      
         <Route 
           path="/dashboard/*" 
           element={
@@ -47,7 +45,6 @@ function App() {
             </ProtectedRoute>
           } 
         >
-          {/* Nested routes inside Dashboard */}
           <Route index element={<DashboardOverview />} />
           <Route path="users" element={<DashboardUsers />} />
           <Route path="users/add" element={<AddUser />} />
@@ -59,7 +56,6 @@ function App() {
           <Route path="bookings/edit/:id" element={<EditBooking />} />
         </Route>
         
-        {/* Protected Routes */}
         <Route 
           path="/booking" 
           element={

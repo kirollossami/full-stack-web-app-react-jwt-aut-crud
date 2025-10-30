@@ -126,7 +126,7 @@ h1 {
 }
 
 .item-details.expanded {
-  max-height: 600px; /* ارتفاع كافي للتفاصيل */
+  max-height: 600px;
   padding: 15px;
 }
 
